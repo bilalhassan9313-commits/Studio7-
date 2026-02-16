@@ -3,72 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO 7 EVENTS | Precision. Passion. Perfection.</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
+    <title>Studio 7 | Precision. Passion. Perfection.</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- Tailwind Config for Gold Theme -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            black: '#0a0a0a',
-                            gold: '#D4AF37',
-                            goldLight: '#F4E4BC',
-                            goldDark: '#B8941F',
-                            bronze: '#8B7355',
-                            cream: '#F5F5DC',
-                            dark: '#111111',
-                            gray: '#1a1a1a'
-                        }
-                    },
-                    fontFamily: {
-                        anton: ['Anton', 'sans-serif'],
-                        oswald: ['Oswald', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif'],
-                        playfair: ['Playfair Display', 'serif'],
-                    },
-                    backgroundImage: {
-                        'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #F4E4BC 50%, #B8941F 100%)',
-                        'gold-shine': 'linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent)',
-                    }
-                }
-            }
-        }
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Custom Scrollbar - Gold Theme */
-        ::-webkit-scrollbar {
-            width: 8px;
+        body { font-family: 'Montserrat', sans-serif; background-color: #000; color: white; }
+        h1, h2, h3, .brand-font { font-family: 'Oswald', sans-serif; }
+        
+        /* The Metallic Gold Gradient */
+        .text-gold {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        ::-webkit-scrollbar-track {
-            background: #0a0a0a; 
+        .border-gold { border-color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .hover-gold:hover { color: #D4AF37; }
+        
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,1));
         }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #D4AF37, #B8941F); 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #F4E4BC, #D4AF37); 
-        }
+    </style>
+</head>
+<body class="bg-black overflow-x-hidden">
 
-        /* Noise Texture Overlay */
-        .noise-overlay {
-            position: fixed;
-            top: 0;
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/90 backdrop-blur-md border-b border-gray-900">
+        <img src="logo.png" alt="Studio 7" class="h-12 object-contain">
+        <div class="hidden md:flex space-x-8 text-sm tracking-widest uppercase">
+            <a href="#vision" class="hover:text-[#D4AF37] transition-colors">Vision</a>
+            <a href="#works" class="hover:text-[#D4AF37] transition-colors">Works</a>
+            <a href="#services" class="hover:text-[#D4AF37] transition-colors">Services</a>
+            <a href="#contact" class="text-[#D4AF37] border border-[#D4AF37] px-4 py-1 hover:bg-[#D4AF37] hover:text-black transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center text-center px-4">
+        <div class="absolute inset-0 z-0">
+            <img src="hero.jpg" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl">
+            <h2 class="text-[#D4AF37] text-sm md:text-lg tracking-[0.5em] mb-4 animate-gsap-fade">EST. 2026</h2>
+            <h1 class="text-5xl md:text-8xl font-bold uppercase tracking-tighter mb-6 leading-tight animate-gsap-up">
+                Precision.<br>Passion.<br><span class="text-gold">Perfection.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto animate-gsap-up">
+                Premium Event Management & Media Production based in Saudi Arabia.
+            </p>
+            <a href="#contact" class="animate-gsap-up inline-block px-10 py-4 border border-[#D4AF37] text-[#D4AF37] text-sm tracking-widest uppercase hover:bg-[#D4AF37] hover:text-black transition-all duration-300">
+                Launch Project
+            </a>
+        </div>
+    </section>
+
+    <section id="vision" class="py-24 px-6 bg-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 uppercase text-gold">The Vision</h2>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                We don't just organize events. We engineer experiences. From concept to execution, Studio 7 is the invisible force behind the noise. Whether it's a high-octane sports tournament or an exclusive brand launch, we bring the same intensity.
+            </p>
+        </div>
+    </section>
+
+    <section id="works" class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="overflow-hidden">
+                    <img src="ksl.jpg" class="w-full rounded-sm hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0">
+                </div>
+                <div>
+                    <span class="text-[#D4AF37] tracking-widest text-sm uppercase">Featured Project</span>
+                    <h2 class="text-4xl md:text-6xl font-bold mt-2 mb-6 uppercase">KSL Season 3</h2>
+                    <p class="text-gray-400 mb-8">
+                        A football spectacle managed, produced, and executed by Studio 7. Organized by FC Silver Patla. Over 10,000 attendees, 32 teams, one unforgettable championship.
+                    </p>
+                    <div class="flex space-x-4 text-sm text-gray-500">
+                        <span>• Event Management</span>
+                        <span>• Live Broadcast</span>
+                        <span>• Logistics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center text-white">OUR EXPERTISE</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group border border-zinc-800 p-8 hover:border-[#D4AF37] transition-all duration-500">
+                    <img src="tournament.jpg" class="w-full h-48 object-cover mb-6 opacity-70 group-hover:opacity-100 transition-opacity">
+                    <h3 class="text-2xl font-bold text-white mb-4">TOURNAMENTS</h3>
+                    <p class="text-gray-400 text-sm">League management, fixtures, and stadium logistics. The home of KSL.</p>
+                </div>
+
+                <div class="group border border-zinc-800 p-8 hover:border-[#D4AF37] transition-all duration-500">
+                    <img src="wedding.jpg" class="w-full h-48 object-cover mb-6 opacity-70 group-hover:opacity-100 transition-opacity">
+                    <h3 class="text-2xl font-bold text-white mb-4">WEDDINGS</h3>
+                    <p class="text-gray-400 text-sm">Cinematic stage design and 4K production for your most important day.</p>
+                </div>
+
+                <div class="group border border-zinc-800 p-8 hover:border-[#D4AF37] transition-all duration-500">
+                    <img src="event.jpg" class="w-full h-48 object-cover mb-6 opacity-70 group-hover:opacity-100 transition-opacity">
+                    <h3 class="text-2xl font-bold text-white mb-4">CORPORATE</h3>
+                    <p class="text-gray-400 text-sm">Product launches and exhibitions that leave a lasting mark on your industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-zinc-900 text-center border-t border-zinc-800">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 uppercase">Ready to make history?</h2>
+        <a href="mailto:hello@studio7.sa" class="text-xl md:text-2xl text-[#D4AF37] hover:text-white transition-colors">
+            hello@studio7.sa
+        </a>
+        <p class="text-gray-600 mt-12 text-sm">© 2026 Studio 7 Events. All Rights Reserved.</p>
+    </section>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Hero Animations
+        gsap.from(".animate-gsap-up", {
+            y: 50, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out"
+        });
+
+        // Scroll Animations
+        gsap.utils.toArray("section").forEach(section => {
+            gsap.from(section.children, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                },
+                y: 30, opacity: 0, duration: 1, stagger: 0.2
+            });
+        });
+    </script>
+</body>
+</html>
             left: 0;
             width: 100%;
             height: 100%;
@@ -758,4 +835,5 @@
         });
     </script>
 </body>
+
 </html>
